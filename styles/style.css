@@ -1,16 +1,19 @@
-header {
+.header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   gap: 10px;
-  height: 293px;
-  padding: 92px 50px 91px 50px;
+  padding: 92px 50px;
+}
+
+.header__menu {
+  margin-bottom: 7px;
 }
 
 .header__links-list {
   display: flex;
-  gap: 32px;
-  font-family: "Raleway";
+  gap: 33px;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -22,7 +25,7 @@ header {
   list-style: circle;
 }
 
-.header__links-list-item_no-bullit,
+.no-bullit,
 .lots__list,
 .footer__links-list-item {
   list-style: none;
@@ -65,7 +68,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: "Raleway";
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -74,12 +77,13 @@ header {
 
 .header__address {
   justify-self: end;
+  margin-bottom: 5px;
 }
 
 .cover {
   position: relative;
   width: 100%;
-  height: 757px;
+  min-height: 757px;
   margin-bottom: 180px;
   padding: 50px;
   color: #ffffff;
@@ -88,21 +92,52 @@ header {
   background-size: cover;
 }
 
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: #000000;
+}
+
 .cover__title {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 21px;
-  margin: 115px 0 94px 0;
+  margin: 114px 0 94px 0;
   font-size: 100px;
   line-height: 115px;
   letter-spacing: 30px;
   text-transform: uppercase;
 }
 
-.letter-spacing-extended {
-  letter-spacing: 60px;
+.aligned-text span {
+  display: block;
+}
+
+.aligned-text__center {
+  margin-left: 30px;
+  text-align: center;
+}
+
+.aligned-text__right {
+  margin-right: -30px;
+  text-align: right;
+}
+
+.cover__description {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 107px;
+  padding-top: 10px;
+  text-transform: uppercase;
 }
 
 .cover__description-text {
@@ -123,45 +158,11 @@ header {
   background: transparent;
 }
 
-.aligned-text span {
-  //display: block;
-}
-
-.aligned-text_center {
-  text-align: center;
-}
-
-.aligned-text_right {
-  text-align: right;
-}
-
-.cover__description {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 109px;
-  padding-top: 10px;
-  text-transform: uppercase;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  background-color: #000000;
-}
-
 .lots {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
-  padding: 0 25px 53px 24px;
+  padding: 0 24px 53px 24px;
   color: #000000;
 }
 
@@ -178,7 +179,6 @@ header {
 }
 
 .lot {
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -201,6 +201,23 @@ header {
   padding: 48px 40px;
 }
 
+.lot__card {
+  background-position: center;
+  background-size: cover;
+}
+
+.movie {
+  background: url("../images/card-lot-01.jpg");
+}
+
+.book {
+  background: url("../images/card-lot-02.jpg");
+}
+
+.picture {
+  background: url("../images/card-lot-03.jpg");
+}
+
 .lot__title {
   position: relative;
   z-index: 1;
@@ -218,28 +235,11 @@ header {
   line-height: 120%;
 }
 
-.movie {
-  background: url("../images/card-lot-01.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.book {
-  background: url("../images/card-lot-02.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.picture {
-  background: url("../images/card-lot-03.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
 .lots__look-more {
   display: block;
-  padding-top: 30px;
-  padding-left: 40px;
+  max-width: fit-content;
+  margin-top: 30px;
+  margin-left: 40px;
   font-size: 20px;
   text-decoration-thickness: 1px;
   text-underline-offset: 3.5px;
@@ -252,8 +252,9 @@ header {
   margin-bottom: 90px;
 }
 
-.left_column {
-  padding-left: 70px;
+.about__column-left {
+  padding-top: 1px;
+  padding-left: 71px;
 }
 
 .about__logo {
@@ -271,7 +272,7 @@ header {
 }
 
 .about__title {
-  padding: 104px 16px 100px 16px;
+  padding: 102px 16px 100px 16px;
   font-size: 40px;
   text-transform: uppercase;
 }
@@ -280,7 +281,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 0 30px 0 15px;
+  margin: 0 27px 0 16px;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;

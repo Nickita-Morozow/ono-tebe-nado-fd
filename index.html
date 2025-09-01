@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
+    <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="fonts/fonts.css" />
   </head>
   <body>
     <header class="header">
       <nav class="header__menu">
         <ul class="header__links-list">
-          <li class="header__links-list-item_no-bullit">
-            <a class="header__link header__link_active" href="#0">Главная</a>
+          <li class="header__links-list-item no-bullit">
+            <a class="header__link header__link_active" href="#0">главная</a>
           </li>
           <li class="header__links-list-item">
             <a class="header__link" href="#0">посмотреть лоты</a>
@@ -42,13 +42,14 @@
       <section class="cover">
         <div class="overlay"></div>
         <h1 class="cover__title aligned-text">
-          <span class="aligned-text_left">Оно </span>
-          <span class="aligned-text_center">тебе </span>
-          <span class="aligned-text_right">надо </span>
+          <span class="aligned-text__left">Оно </span>
+          <span class="aligned-text__center">тебе </span>
+          <span class="aligned-text__right">надо </span>
         </h1>
         <div class="cover__description">
           <p class="cover__description-text">
-            Аукцион вещей, в которые никто не верил
+            Аукцион вещей, в которые никто
+            <span class="cover__description-text-offset">не верил</span>
           </p>
           <button class="bet-button">Сделать ставку</button>
         </div>
@@ -58,7 +59,7 @@
         <ul class="lots__list">
           <li class="lot">
             <a href="#0" class="lot-link">
-              <article class="movie">
+              <article class="lot__card movie">
                 <div class="overlay"></div>
                 <h3 class="lot__title">
                   Фильм режиссёра, который бросил киношколу
@@ -73,7 +74,7 @@
           </li>
           <li class="lot">
             <a href="#0" class="lot-link">
-              <article class="book">
+              <article class="lot__card book">
                 <div class="overlay"></div>
                 <h3 class="lot__title">
                   Книга, где описан один скучный день из жизни рекламного агента
@@ -91,7 +92,7 @@
           </li>
           <li class="lot">
             <a href="#0" class="lot-link">
-              <article class="picture">
+              <article class="lot__card picture">
                 <div class="overlay"></div>
                 <h3 class="lot__title">
                   Картина, которую повторит даже 5-летний сын маминой подруги
@@ -109,7 +110,7 @@
         <a href="#0" class="lots__look-more">Посмотреть больше</a>
       </section>
       <section class="about">
-        <div class="left_column">
+        <div class="about__column-left">
           <div class="about__logo">
             <img
               class="about__logo-image"
@@ -119,7 +120,7 @@
             />
           </div>
         </div>
-        <div class="right_column">
+        <article class="about__column-right">
           <h2 class="about__title">Об аукционе</h2>
           <div class="about__text">
             <p>
@@ -132,14 +133,15 @@
             <p>
               Слишком сложные или, наоборот, слишком простые. Опережающие своё
               время. В пух и прах растерзанные критиками. Непринятые и
-              непонятые. Когда-то они казались просто неудачными. Но, несмотря
+              непонятые. Когда-то они казались просто неудачными. Но,
+              несмотря<br />
               на критику, кажущуюся простоту или сложность, сейчас без этих
               лотов невозможно представить современную культуру. Когда в эти
               вещи не верил никто, продолжали верить их создатели. И сейчас эти
               лоты стали культовыми.
             </p>
           </div>
-        </div>
+        </article>
       </section>
     </main>
     <footer class="footer">
@@ -151,7 +153,7 @@
       <nav class="footer__menu">
         <ul>
           <li class="footer__links-list-item">
-            <a class="footer__link footer__link_active" href="#0">Главная</a>
+            <a class="footer__link footer__link_active" href="#0">главная</a>
           </li>
           <li class="footer__links-list-item">
             <a class="footer__link" href="#0">посмотреть лоты</a>
@@ -163,7 +165,7 @@
       </nav>
       <ul class="footer__social-list">
         <li class="footer__social-list-item">
-          <a class="footer__social-link">
+          <a class="footer__social-link" target="_blank">
             <img
               class="footer__social-icon"
               src="images/yt.svg"
@@ -172,7 +174,7 @@
           </a>
         </li>
         <li class="footer__social-list-item">
-          <a class="footer__social-link">
+          <a class="footer__social-link" target="_blank">
             <img
               class="footer__social-icon"
               src="images/vk.svg"
@@ -181,7 +183,7 @@
           </a>
         </li>
         <li class="footer__social-list-item">
-          <a class="footer__social-link">
+          <a class="footer__social-link" target="_blank">
             <img
               class="footer__social-icon"
               src="images/pinterest.svg"
